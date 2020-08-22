@@ -32,6 +32,7 @@ interface Transaction {
   templateUrl: './activity.component.html',
   styleUrls: ['./activity.component.scss']
 })
+
 export class ActivityComponent implements OnInit {
   transactions$: Observable<Transaction[]>;
 
@@ -39,7 +40,6 @@ export class ActivityComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     const httpOptions = {
       headers: new HttpHeaders({
         Authorization: localStorage.getItem('token') 
