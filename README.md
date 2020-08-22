@@ -1,4 +1,4 @@
-# bitbar-upbank
+# upbank-angular
 
 [![MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/jakehwll/bitbar-upbank/blob/master/LICENSE.md)
 [![Python](https://img.shields.io/badge/Angular-10-brightgreen.svg)](https://angular.io/)
