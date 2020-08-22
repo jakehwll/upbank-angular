@@ -1,9 +1,11 @@
 <div class="wrapper" *ngIf="accounts$ | async as accounts else noData">
     <div class="account" *ngFor="let account of accounts">
-        
-        <span>{{ account.attributes.displayName }}</span>
 
-        ${{ account.attributes.balance.value }}
+        <div>
+            {{ account.attributes.displayName }}
+        </div>
+
+        <span>${{ account.attributes.balance.value }}</span>
 
     </div> 
 </div>

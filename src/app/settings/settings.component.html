@@ -1,13 +1,23 @@
 <div class="wrapper" data-settings>
-    
+
     <div class="card">
+        <p class="text-center">
+            First things first, you're gonna need an API-key from <a href="https://api.up.com.au/getting_started" target="_blank">here</a>.
+        </p>
+        <p class="text-center">
+            Follow the instructions and then paste below.
+        </p>
         
         <div class="input-wrapper">
             <input type="text" id="api-key" name="api-key" ng-value="localStorage.getItem('some-key')" placeholder="API Key">
             <label for="api-key">API Key</label>
         </div>
-        
+
         <button class="btn" (click)="myFunc()">Save</button>
     </div>
+
+    <p class="text-center">
+        And fret-not, we don't store this centrally its all on your local machine.
+    </p>
     
 </div>
