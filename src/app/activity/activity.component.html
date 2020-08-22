@@ -1,0 +1,28 @@
+<div class="wrapper" *ngIf="transactions$ | async as transactions else noData">
+    <div>
+        <div class="transaction" *ngFor="let transaction of transactions">
+
+            <div>
+                <div>{{ transaction.attributes.description }}</div>
+                <small>
+                    {{ transaction.attributes.createdAt | date :'short' }}
+                </small>
+            </div>
+
+            <div>
+                <span class="{{transaction.attributes.amount.value > 0 ? 'positive' : 'negative'}}">${{ transaction.attributes.amount.value }}</span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<ng-template #noData>
+
+    <div class="wrapper text-center">
+        <h1>Sorry</h1>
+        <p>No transactions were found, either something went wrong<br />or you haven't given us an appropriate API key!</p>
+        <a class="btn" routerLink="/settings">Checkout settings</a>
+    </div>
+
+</ng-template>

@@ -1,0 +1,43 @@
+$dark: #242430;
+
+$orange: #ff7a64;
+$yellow: #ffef6b;
+$blue: #4e6280;
+$pink: #ff8bb5;
+
+$success: #00b97d;
+
+.balance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem 2rem 2rem;
+    &--amount {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $orange;
+    }
+}
+
+.transaction {
+
+    background: white;
+    color: $dark;
+
+    padding: 1rem;
+
+    &:first-of-type { border-radius: 4px 4px 0px 0px; }
+    &:last-of-type { border-radius: 0px 0px 4px 4px; }
+
+    &:not(:last-of-type) { border-bottom: 1px solid #e9e9ea; }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .positive {
+        color: $success;
+    }
+
+}
