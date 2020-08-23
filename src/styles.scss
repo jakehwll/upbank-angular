@@ -136,13 +136,15 @@ p {
 .input-wrapper {
     position: relative;
     margin: .5rem 0;
-    input {
+    input, select {
         width: 100%;
         border-radius: 4px;
         border: 1px solid $dark;
         font: inherit;
         padding: 1rem;
         outline: none;
+        background: white;
+        margin-bottom: .5rem;
         &:focus,
         &:not(:placeholder-shown) {
             + label {
@@ -163,6 +165,7 @@ p {
             color: transparent;
         }
     }
+    select + label,
     input + label {
         position: absolute;
         transform: translateY(-50%);
@@ -174,4 +177,8 @@ p {
         pointer-events: none;
         color: $dark;
     }
+}
+
+select {
+    -webkit-appearance: none;
 }
