@@ -1,7 +1,7 @@
 <div class="wrapper" *ngIf="accounts$ | async as accounts else noData">
     <div class="account" *ngFor="let account of accounts">
 
-        <div>
+        <div class="account--title">
             {{ account.attributes.displayName }}
         </div>
 
